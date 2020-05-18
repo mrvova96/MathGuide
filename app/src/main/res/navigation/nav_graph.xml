@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_entrants">
+
+    <fragment
+        android:id="@+id/nav_entrants"
+        android:name="com.example.mathguide.fragment.EntrantsFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_entrants">
+        <action
+            android:id="@+id/action_nav_entrants_to_nav_entry"
+            app:destination="@id/nav_entry" />
+        <action
+            android:id="@+id/action_nav_entrants_to_nav_direction"
+            app:destination="@id/nav_direction" />
+        <action
+            android:id="@+id/action_nav_entrants_to_nav_department"
+            app:destination="@id/nav_department" />
+        <action
+            android:id="@+id/action_nav_entrants_to_nav_contacts"
+            app:destination="@id/nav_contacts" />
+        <action
+            android:id="@+id/action_nav_entrants_to_nav_about2"
+            app:destination="@id/nav_about" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.example.mathguide.fragment.AboutProgramFragment"
+        android:label="@string/nav_about"
+        tools:layout="@layout/fragment_about_program" />
+    <fragment
+        android:id="@+id/nav_department"
+        android:name="com.example.mathguide.fragment.DepartmentFragment"
+        android:label="@string/nav_department"
+        tools:layout="@layout/fragment_department">
+        <action
+            android:id="@+id/action_nav_department_to_nav_department_info"
+            app:destination="@id/nav_department_info" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_contacts"
+        android:name="com.example.mathguide.fragment.ContactsFragment"
+        android:label="@string/nav_contacts"
+        tools:layout="@layout/fragment_contacts" >
+        <action
+            android:id="@+id/action_nav_contacts_to_nav_contacts_info"
+            app:destination="@id/nav_contacts_info" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_direction"
+        android:name="com.example.mathguide.fragment.DirectionFragment"
+        android:label="@string/nav_direction"
+        tools:layout="@layout/fragment_direction">
+        <action
+            android:id="@+id/action_nav_direction_to_nav_direction_info"
+            app:destination="@id/nav_direction_info" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_entry"
+        android:name="com.example.mathguide.fragment.EntryFragment"
+        android:label="@string/nav_entry"
+        tools:layout="@layout/fragment_entry" />
+    <fragment
+        android:id="@+id/nav_direction_info"
+        android:name="com.example.mathguide.fragment.DirectionInfoFragment"
+        android:label="@string/nav_direction"
+        tools:layout="@layout/fragment_direction_info" />
+    <fragment
+        android:id="@+id/nav_department_info"
+        android:name="com.example.mathguide.fragment.DepartmentInfoFragment"
+        android:label="@string/nav_department"
+        tools:layout="@layout/fragment_department_info" />
+    <fragment
+        android:id="@+id/nav_contacts_info"
+        android:name="com.example.mathguide.fragment.ContactsInfoFragment"
+        android:label="@string/nav_contacts"
+        tools:layout="@layout/fragment_contacts_info" />
+
+</navigation>

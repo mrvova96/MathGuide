@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".fragment.DepartmentFragment">
+
+        <Button
+            android:id="@+id/button_department_to_nd"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="40dp"
+            android:clickable="false"
+            android:gravity="start|center_vertical"
+            android:text="НЕЛИНЕЙНОЙ ДИНАМИКИ"
+            android:textColor="@android:color/secondary_text_light"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/image_bottom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_department_to_om"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/button_department_to_om"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:gravity="start|center_vertical"
+            android:text="ОБЩЕЙ МАТЕМАТИКИ"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_department_to_mm" />
+
+        <Button
+            android:id="@+id/button_department_to_mm"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:gravity="start|center_vertical"
+            android:text="МАТЕМАТИЧЕСКОГО МОДЕЛИРОВАНИЯ"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_department_to_ma" />
+
+        <Button
+            android:id="@+id/button_department_to_ma"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:gravity="start|center_vertical"
+            android:text="МАТЕМАТИЧЕСКОГО АНАЛИЗА"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_department_to_kb" />
+
+        <Button
+            android:id="@+id/button_department_to_aml"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:gravity="start|center_vertical"
+            android:text="АЛГЕБРЫ И МАТЕМАТИЧЕСКОЙ ЛОГИКИ"
+            android:textColor="@color/colorPrimaryDark"
+            android:textIsSelectable="false"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_department" />
+
+        <Button
+            android:id="@+id/button_department_to_kb"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:gravity="start|center_vertical"
+            android:text="КОМПЬЮТЕРНОЙ БЕЗОПАСНОСТИ"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_department_to_du" />
+
+        <Button
+            android:id="@+id/button_department_to_du"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:gravity="start|center_vertical"
+            android:text="ДИФФЕРЕНЦИАЛЬНЫХ УРАВНЕНИЙ"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_department_to_aml" />
+
+        <ImageView
+            android:id="@+id/image_department"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/department"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_bottom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/bottom"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
