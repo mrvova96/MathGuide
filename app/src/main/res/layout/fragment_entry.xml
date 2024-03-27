@@ -46,8 +46,8 @@
 
         <ImageView
             android:id="@+id/image_entry_about"
-            android:layout_width="193dp"
-            android:layout_height="155dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="40dp"
             app:layout_constraintBottom_toTopOf="@+id/image_bottom"

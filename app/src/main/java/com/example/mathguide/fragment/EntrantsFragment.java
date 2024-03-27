@@ -33,7 +33,10 @@ public class EntrantsFragment extends Fragment {
         Glide.with(this).load(R.drawable.entrants).into(imageView);
 
         ImageView imageView1 = view.findViewById(R.id.image_entrants_about);
-        Glide.with(this).load("https://math.uniyar.ac.ru/file/get/432d7f0d-9699-4d44-8c42-e0597d8b359c").into(imageView1);
+        Glide.with(this)
+                .load("https://math.uniyar.ac.ru/file/get/432d7f0d-9699-4d44-8c42-e0597d8b359c")
+                .override((int) (170 * requireContext().getResources().getDisplayMetrics().density))
+                .into(imageView1);
 
 
         ImageView imageView2 = view.findViewById(R.id.image_bottom);
@@ -42,11 +45,10 @@ public class EntrantsFragment extends Fragment {
         TextView textView = view.findViewById(R.id.text_entrants);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             textView.setText(Html.fromHtml(getResources().getString(R.string.text_entrants), Html.FROM_HTML_MODE_LEGACY));
-            textView.setMovementMethod(LinkMovementMethod.getInstance());
         } else {
             textView.setText(Html.fromHtml(getResources().getString(R.string.text_entrants)));
-            textView.setMovementMethod(LinkMovementMethod.getInstance());
         }
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
 
         view.findViewById(R.id.button_entrants_to_entry).setOnClickListener(new View.OnClickListener() {
             @Override

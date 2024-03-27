@@ -21,6 +21,11 @@
     <string name="menu_about">О программе</string>
     <string name="menu_exit">Выйти</string>
 
+    // Alert dialog
+    <string name="text_title_exit">Вы действительно хотите выйти?</string>
+    <string name="text_negative">Отмена</string>
+    <string name="text_positive">Выход</string>
+
     // About program fragment
     <string name="text_about">MathGuide v1.0</string>
     <string name="text_about_1">Все права защищены</string>
@@ -338,7 +343,4 @@
         <ul><li>Профессорско-преподавательский состав, имеющий 15-летний опыт подготовки специалистов</li><li>Современные знания в области информационных технологий, программирования и защиты информации</li><li>Качественное образование, проверенное временем</li></ul>
         ]]>
     </string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

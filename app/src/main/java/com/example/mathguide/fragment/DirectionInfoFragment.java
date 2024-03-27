@@ -36,16 +36,18 @@ public class DirectionInfoFragment extends Fragment {
         Glide.with(this).load(imageValue).into(imageView);
 
         ImageView imageView1 = view.findViewById(R.id.image_direction_about);
-        Glide.with(this).load(imageValue1).into(imageView1);
+        Glide.with(this)
+                .load(imageValue1)
+                .override((int) (250 * requireContext().getResources().getDisplayMetrics().density))
+                .into(imageView1);
 
         TextView textView = view.findViewById(R.id.text_direction_info);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             textView.setText(Html.fromHtml(getResources().getString(textValue), Html.FROM_HTML_MODE_LEGACY));
-            textView.setMovementMethod(LinkMovementMethod.getInstance());
         } else {
             textView.setText(Html.fromHtml(getResources().getString(textValue)));
-            textView.setMovementMethod(LinkMovementMethod.getInstance());
         }
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
     }
 }
 

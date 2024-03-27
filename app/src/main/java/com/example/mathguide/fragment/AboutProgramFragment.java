@@ -25,6 +25,6 @@ public class AboutProgramFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         ImageView imageView = view.findViewById(R.id.image_about);
-        Glide.with(this).load(R.mipmap.ic_launcher_foreground).into(imageView);
+        Glide.with(this).load(R.drawable.icon_launcher).into(imageView);
     }
 }

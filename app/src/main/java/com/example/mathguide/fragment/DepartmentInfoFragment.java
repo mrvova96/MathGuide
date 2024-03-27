@@ -38,10 +38,9 @@ public class DepartmentInfoFragment extends Fragment {
         TextView textView = view.findViewById(R.id.text_department_info);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             textView.setText(Html.fromHtml(getResources().getString(textValue), Html.FROM_HTML_MODE_LEGACY));
-            textView.setMovementMethod(LinkMovementMethod.getInstance());
         } else {
             textView.setText(Html.fromHtml(getResources().getString(textValue)));
-            textView.setMovementMethod(LinkMovementMethod.getInstance());
         }
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
     }
 }

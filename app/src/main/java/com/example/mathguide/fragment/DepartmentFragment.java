@@ -33,39 +33,33 @@ public class DepartmentFragment extends Fragment {
         Glide.with(this).load(R.drawable.bottom).into(imageView1);
 
         view.findViewById(R.id.button_department_to_aml).setOnClickListener(v -> {
-            bundle.putInt("image", R.drawable.department_aml);
-            bundle.putInt("text", R.string.text_department_aml);
-            Navigation.findNavController(v).navigate(R.id.action_nav_department_to_nav_department_info, bundle);
+            putData(bundle, v, R.drawable.department_aml, R.string.text_department_aml);
         });
 
         view.findViewById(R.id.button_department_to_du).setOnClickListener(v -> {
-            bundle.putInt("image", R.drawable.department_du);
-            bundle.putInt("text", R.string.text_department_du);
-            Navigation.findNavController(v).navigate(R.id.action_nav_department_to_nav_department_info, bundle);
+            putData(bundle, v, R.drawable.department_du, R.string.text_department_du);
         });
 
         view.findViewById(R.id.button_department_to_kb).setOnClickListener(v -> {
-            bundle.putInt("image", R.drawable.department_kb);
-            bundle.putInt("text", R.string.text_department_kb);
-            Navigation.findNavController(v).navigate(R.id.action_nav_department_to_nav_department_info, bundle);
+            putData(bundle, v, R.drawable.department_kb, R.string.text_department_kb);
         });
 
         view.findViewById(R.id.button_department_to_ma).setOnClickListener(v -> {
-            bundle.putInt("image", R.drawable.department_ma);
-            bundle.putInt("text", R.string.text_department_ma);
-            Navigation.findNavController(v).navigate(R.id.action_nav_department_to_nav_department_info, bundle);
+            putData(bundle, v, R.drawable.department_ma, R.string.text_department_ma);
         });
 
         view.findViewById(R.id.button_department_to_mm).setOnClickListener(v -> {
-            bundle.putInt("image", R.drawable.department_mm);
-            bundle.putInt("text", R.string.text_department_mm);
-            Navigation.findNavController(v).navigate(R.id.action_nav_department_to_nav_department_info, bundle);
+            putData(bundle, v, R.drawable.department_mm, R.string.text_department_mm);
         });
 
         view.findViewById(R.id.button_department_to_om).setOnClickListener(v -> {
-            bundle.putInt("image", R.drawable.department_om);
-            bundle.putInt("text", R.string.text_department_om);
-            Navigation.findNavController(v).navigate(R.id.action_nav_department_to_nav_department_info, bundle);
+            putData(bundle, v, R.drawable.department_om, R.string.text_department_om);
         });
+    }
+
+    private void putData(Bundle bundle, View v, int imageID, int textID) {
+        bundle.putInt("image", imageID);
+        bundle.putInt("text", textID);
+        Navigation.findNavController(v).navigate(R.id.action_nav_department_to_nav_department_info, bundle);
     }
 }

@@ -33,7 +33,10 @@ public class EntryFragment extends Fragment {
         Glide.with(this).load(R.drawable.entry).into(imageView);
 
         ImageView imageView1 = view.findViewById(R.id.image_entry_about);
-        Glide.with(this).load("https://math.uniyar.ac.ru/file/get/cd32a264-9da1-4b2c-9d4b-0beb1fc5f3c4").into(imageView1);
+        Glide.with(this)
+                .load("https://math.uniyar.ac.ru/file/get/cd32a264-9da1-4b2c-9d4b-0beb1fc5f3c4")
+                .override((int) (193 * requireContext().getResources().getDisplayMetrics().density), (int) (155 * requireContext().getResources().getDisplayMetrics().density))
+                .into(imageView1);
 
         ImageView imageView2 = view.findViewById(R.id.image_bottom);
         Glide.with(this).load(R.drawable.bottom).into(imageView2);
@@ -41,10 +44,9 @@ public class EntryFragment extends Fragment {
         TextView textView = view.findViewById(R.id.text_entry);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             textView.setText(Html.fromHtml(getResources().getString(R.string.text_entry), Html.FROM_HTML_MODE_LEGACY));
-            textView.setMovementMethod(LinkMovementMethod.getInstance());
         } else {
             textView.setText(Html.fromHtml(getResources().getString(R.string.text_entry)));
-            textView.setMovementMethod(LinkMovementMethod.getInstance());
         }
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
     }
 }

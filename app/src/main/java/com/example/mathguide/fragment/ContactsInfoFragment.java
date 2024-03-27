@@ -18,6 +18,8 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.example.mathguide.R;
 
+import java.util.Objects;
+
 public class ContactsInfoFragment extends Fragment {
 
     @Override
@@ -36,7 +38,10 @@ public class ContactsInfoFragment extends Fragment {
         Glide.with(this).load(imageValue).into(imageView);
 
         ImageView imageView1 = view.findViewById(R.id.image_contacts_about);
-        Glide.with(this).load("https://math.uniyar.ac.ru/file/get/eb2b4c88-2ae7-4a50-9858-f7816f6e15b5").into(imageView1);
+        Glide.with(this)
+                .load("https://math.uniyar.ac.ru/file/get/eb2b4c88-2ae7-4a50-9858-f7816f6e15b5")
+                .override((int) (185 * requireContext().getResources().getDisplayMetrics().density))
+                .into(imageView1);
 
         ImageView imageView2 = view.findViewById(R.id.image_bottom);
         Glide.with(this).load(R.drawable.bottom).into(imageView2);
@@ -44,10 +49,9 @@ public class ContactsInfoFragment extends Fragment {
         TextView textView = view.findViewById(R.id.text_contacts);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             textView.setText(Html.fromHtml(getResources().getString(textValue), Html.FROM_HTML_MODE_LEGACY));
-            textView.setMovementMethod(LinkMovementMethod.getInstance());
         } else {
             textView.setText(Html.fromHtml(getResources().getString(textValue)));
-            textView.setMovementMethod(LinkMovementMethod.getInstance());
         }
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
     }
 }
